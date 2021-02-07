@@ -11,8 +11,8 @@ function App() {
       {/* 大文字スタートで tag ではないと認識 */}
       {/* <User name={"Taro"} age={10} /> */}
       {
-        profiles.map(function (profile) {
-          return <User name={profile.name} age={profile.age} />
+        profiles.map(function (profile, index) {
+          return <User name={profile.name} age={profile.age} key={index} />
         })
       }
     </div>
