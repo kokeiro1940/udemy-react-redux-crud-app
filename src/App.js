@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 
 // jsx でのコーディング
 function App() {
+  const dom = <input type="text" onChange={() => {console.log("I am cliked!")}} ></input>;
   return (
-    <div><h1>Hello, World!!</h1></div>
+    <React.Fragment>
+      <label>hoge</label>
+      <label>{dom}</label>
+    </React.Fragment>
   );
 }
 
