@@ -1,7 +1,7 @@
 // import React, { Component } from 'react';
 import React from 'react';
 
-// jsx でのコーディング
+// jsx でのコーディング (関数Component)
 function App() {
   const dom = <input type="text" onChange={() => {console.log("I am cliked!")}} ></input>;
   return (
@@ -21,7 +21,7 @@ function App() {
 //   );
 // }
 
-// // Component を用いたコーディング
+// // クラスComponent を用いたコーディング
 // class App extends Component {
 //   render() {
     // return React.createElement (
