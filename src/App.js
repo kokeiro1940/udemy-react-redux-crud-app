@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import React from 'react';
 
 // jsx でのコーディング
 function App() {
@@ -12,13 +13,22 @@ function App() {
 }
 
 // // js での コーディング
+// function App() {
+//   return React.createElement (
+//     "div",
+//     null,
+//     "Hello,world!!!!!!!!!!!!!"
+//   );
+// }
+
+// // Component を用いたコーディング
 // class App extends Component {
 //   render() {
-//     return React.createElement (
-//         "div",
-//         null,
-//         "Hello,world!!!!!!!!!!!!!"
-//       );
+    // return React.createElement (
+    //     "div",
+    //     null,
+    //     "Hello,world!!!!!!!!!!!!!"
+    //   );
 //   }
 // }
 
