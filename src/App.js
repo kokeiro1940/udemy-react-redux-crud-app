@@ -1,35 +1,30 @@
-// import React, { Component } from 'react';
 import React from 'react';
 
-// jsx でのコーディング (関数Component)
 function App() {
-  const dom = <input type="text" onChange={() => {console.log("I am cliked!")}} ></input>;
+  const profiles = [
+    { name: "Taro", age: 10 },
+    { name: "Hanako", age: 8 },
+    { name: "knowname"}
+  ]
   return (
-    <React.Fragment>
-      <label>hoge</label>
-      <label>{dom}</label>
-    </React.Fragment>
+    <div>
+      {/* 大文字スタートで tag ではないと認識 */}
+      {/* <User name={"Taro"} age={10} /> */}
+      {
+        profiles.map(function (profile) {
+          return <User name={profile.name} age={profile.age} />
+        })
+      }
+    </div>
   );
 }
 
-// // js での コーディング
-// function App() {
-//   return React.createElement (
-//     "div",
-//     null,
-//     "Hello,world!!!!!!!!!!!!!"
-//   );
-// }
+const User = (props) => {
+  return <div>Hi, {props.name}, and {props.age} yeas old!</div>
+}
 
-// // クラスComponent を用いたコーディング
-// class App extends Component {
-//   render() {
-    // return React.createElement (
-    //     "div",
-    //     null,
-    //     "Hello,world!!!!!!!!!!!!!"
-    //   );
-//   }
-// }
+User.defaultProps = {
+  age: 111
+}
 
 export default App;
